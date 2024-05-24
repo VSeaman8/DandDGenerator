@@ -4,11 +4,12 @@ import Navbar from "./Navbar.jsx";
 
 import "./layout.css";
 
-const Layout = () => {
+const Layout = ({ children }) => {
   return (
     <div>
       <Background>
         <Navbar />
+        {children}
         <Footer />
       </Background>
     </div>

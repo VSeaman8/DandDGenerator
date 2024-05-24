@@ -1,7 +1,15 @@
+import GeneratorBtn from "../components/GeneratorBtn.jsx";
+
+import "./HomePage.css";
+
 const HomePage = () => {
   return (
-    <div>
-      <h1>Welcome to the D&D Character Generator</h1>
+    <div className="homePageContainer">
+      <h2>Dungeons & </h2>
+      <h2>Dragons </h2>
+      <h2>Character </h2>
+      <h2>Generator</h2>
+      <GeneratorBtn />
     </div>
   );
 };
