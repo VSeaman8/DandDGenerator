@@ -11,3 +11,10 @@
   font-size: 125px;
   text-align: left;
 }
+
+/* GeneratorBtn */
+.genBtn {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
