@@ -1,0 +1,48 @@
+/* FavouriteCharPage CSS */
+.MainCharacterContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.nameContainerGrid {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+}
+
+.skillsContainerGrid {
+  grid-column: 1 / 2;
+  grid-row: 2 / 2;
+}
+
+.basicsContainerGrid {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+.equipmentContainerGrid {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+.traitsContainerGrid {
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+}
+
+.featuresContainerGrid {
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+}
+
+/* Basics Container CSS */
+.basicsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.basicsContainer .row {
+  display: flex;
+  justify-content: space-between;
+}

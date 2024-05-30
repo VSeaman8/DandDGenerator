@@ -5,16 +5,29 @@ import NameContainer from "../containers/NameContainer.jsx";
 import SkillsContainer from "../containers/SkillsContainer.jsx";
 import TraitsContainer from "../containers/TraitsContainer.jsx";
 
+import "./FavouriteCharPage.css";
+
 const FavouriteCharPage = () => {
   return (
     <div className="MainCharacterContainer">
-      This is the favorite char page
-      <SkillsContainer />
-      <BasicsContainer />
-      <NameContainer />
-      <EquipmentContainer />
-      <TraitsContainer />
-      <FeaturesContainer />
+      <div className="nameContainerGrid">
+        <NameContainer />
+      </div>
+      <div className="skillsContainerGrid">
+        <SkillsContainer />
+      </div>
+      <div className="basicsContainerGrid">
+        <BasicsContainer />
+      </div>
+      <div className="equipmentContainerGrid">
+        <EquipmentContainer />
+      </div>
+      <div className="traitsContainerGrid">
+        <TraitsContainer />
+      </div>
+      <div className="featuresContainerGrid">
+        <FeaturesContainer />
+      </div>
     </div>
   );
 };
