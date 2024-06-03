@@ -138,3 +138,45 @@ hr {
   background-color: rgba(255, 255, 255, 0.5);
   color: black;
 }
+
+/* Skills Container */
+.skillItem {
+  display: flex;
+  align-items: center; /* Align the items along the center line */
+  width: fit-content; /* Adjust the width to fit the content */
+}
+
+.circle {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid black;
+  margin-right: 5px;
+}
+
+.circle.filled {
+  background-color: black; /* Fill the circle */
+}
+
+.breakLineContainer {
+  position: relative;
+  width: 50px; /* Set the width to be the same as the break line */
+  margin-left: auto; /* Center the div */
+  margin-right: auto; /* Center the div */
+  text-align: center; /* Center the text and break line */
+}
+
+.proficiencyNumber {
+  position: absolute;
+  bottom: 100%; /* Position the number above the break line */
+  left: 50%; /* Center the number */
+  transform: translateX(-50%); /* Ensure the centering is accurate */
+  width: 50px; /* Set the width to be the same as the break line */
+}
+
+.breakLine {
+  display: inline-block;
+  width: 50px;
+  border-top: 1px solid white;
+}
