@@ -30,7 +30,7 @@ const SkillsContainer = () => {
 
   return (
     <div className="skillsContainer">
-      <div className="skillsList">
+      <div className="skillsList boxconfig">
         <h3>Skills</h3>
         <ul>
           {skills.map((skill) => (
@@ -49,7 +49,7 @@ const SkillsContainer = () => {
           ))}
         </ul>
       </div>
-      <div className="savingThrowsList">
+      <div className="savingThrowsList boxconfig">
         <h3>Saving Throws</h3>
         <ul>
           {savingThrows.map((throwItem) => (
@@ -72,6 +72,9 @@ const SkillsContainer = () => {
       </div>
       <div className="wealthcontainer">
         <h2>Wealth</h2>
+        <p>Gold 296</p>
+        <p>Silver 500</p>
+        <p>Copper 6,000</p>
       </div>
     </div>
   );
