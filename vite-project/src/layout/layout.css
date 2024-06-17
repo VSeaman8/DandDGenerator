@@ -6,8 +6,8 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #999;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   z-index: -1;
   top: 0;
   left: 0;
@@ -17,12 +17,13 @@
 /* Footer Component */
 
 .footer-container {
-  position: absolute;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   bottom: 0;
   width: 100%;
+  z-index: 1;
 }
 
 /* Navbar Component */
