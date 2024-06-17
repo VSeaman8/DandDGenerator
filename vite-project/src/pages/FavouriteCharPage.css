@@ -20,6 +20,11 @@
 .skillsContainerGrid {
   grid-column: 2 / 2;
   grid-row: 2 / 4;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* This creates two columns of equal width */
+  grid-template-rows: auto auto; /* This creates two rows that adjust to their content */
+  grid-gap: 20px;
+  width: 100%; /* This makes the skillsContainerGrid take up the full width of its parent grid cell */
 }
 
 .traitsContainerGrid {
@@ -190,6 +195,21 @@ hr {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow for a 3D effect */
   color: black;
 }
+
+.skillsList {
+  grid-column: 1; /* This places the skills list in the first column */
+  grid-row: 1; /* This places the skills list in the first row */
+}
+
+.savingThrowsList {
+  grid-column: 3; /* This places the saving throws list in the second column */
+  grid-row: 1; /* This places the saving throws list in the first row */
+}
+
+.wealth {
+  grid-column: 3; /* This places the wealth in the second column */
+  grid-row: 3; /* This places the wealth in the second row */
+}
 /* Features & traits css */
 .trait {
   background: rgba(255, 255, 255, 0.5); /* White background with 80% opacity */
@@ -200,6 +220,12 @@ hr {
   color: black;
 }
 
+/* Equipment Container */
+.equipmentContainer {
+  display: grid; /* This makes .equipmentContainer a grid container */
+  grid-template-columns: 1fr 1fr 1fr; /* This creates three columns of equal width */
+  grid-gap: 20px; /* This adds some space between the grid items */
+}
 /* Features Container css */
 
 .personalityContainer,
@@ -213,6 +239,9 @@ hr {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow for a 3D effect */
   margin-bottom: 20px; /* Add some space between the features */
   color: #29251e;
+}
+.skillsContainerGrid.boxconfig {
+  width: 100%; /* This makes the skillsContainerGrid take up the full width of its parent grid cell */
 }
 
 .weaponsContainer table {
@@ -230,4 +259,14 @@ hr {
 .weaponsContainer th {
   border-top: 1px solid #ddd; /* Add a border to the top of the header cells */
   border-bottom: 2px solid #ddd; /* Make the border at the bottom of the header cells thicker */
+}
+
+/* Features blue */
+.featuresContainer {
+  display: grid; /* This makes .equipmentContainer a grid container */
+  grid-template-columns: repeat(
+    4,
+    1fr
+  ); /* This creates four columns of equal width */
+  grid-gap: 20px; /* This adds some space between the grid items */
 }
