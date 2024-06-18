@@ -1,5 +1,5 @@
-const Background = ({ children }) => {
-  return <div className="background">{children}</div>;
+const Background = ({ children, className }) => {
+  return <div className={`background ${className}`}>{children}</div>;
 };
 
 export default Background;

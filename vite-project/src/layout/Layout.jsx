@@ -4,9 +4,10 @@ import Navbar from "./Navbar.jsx";
 
 import "./layout.css";
 
-const Layout = ({ children }) => {
+const Layout = ({ children, page }) => {
+  const backgroundClass = page === "/" ? "homepageBackground" : "background";
   return (
-    <div>
+    <div className={backgroundClass}>
       <Background>
         <Navbar />
         {children}

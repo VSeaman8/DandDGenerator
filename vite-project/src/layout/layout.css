@@ -13,6 +13,11 @@
   left: 0;
   color: aliceblue;
 }
+/* Homepage Background Component CSS */
+.homepageBackground {
+  height: 100vh;
+  width: 100vw; /* This makes the background cover the full viewport height */
+}
 
 /* Footer Component */
 
