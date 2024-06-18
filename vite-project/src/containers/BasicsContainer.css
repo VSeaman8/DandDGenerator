@@ -1,0 +1,55 @@
+/* Basics Container CSS */
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.attribute {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.attributeBox {
+  width: 200px;
+  height: 100px;
+  border: 1px solid white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: black;
+}
+.levelClassContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.level,
+.class {
+  width: 45%;
+  text-align: center;
+}
+
+hr {
+  width: 100%;
+  border: none;
+  border-top: 1px solid white;
+}
+
+.numberWord {
+  text-align: center;
+}
+.basicsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid white; /* Change 'white' to any color you want */
+  width: 100%;
+}

@@ -1,0 +1,6 @@
+/* Equipment Container */
+.equipmentContainer {
+  display: grid; /* This makes .equipmentContainer a grid container */
+  grid-template-columns: 1fr 1fr 1fr; /* This creates three columns of equal width */
+  grid-gap: 20px; /* This adds some space between the grid items */
+}

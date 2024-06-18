@@ -1,4 +1,4 @@
-/* FavouriteCharPage CSS */
+/* FavouriteCharPage CSS & common to all containers CSS */
 .MainCharacterContainer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -18,11 +18,13 @@
 }
 
 .skillsContainerGrid {
-  grid-column: 2 / 2;
-  grid-row: 2 / 4;
+  grid-column: 1 / 4; /* This makes the skillsContainerGrid take up the full width of its parent grid */
+  grid-row: 5 / 6;
+  /*grid-column: 2 / 2;
+  grid-row: 2 / 4;*/
   display: grid;
-  grid-template-columns: 1fr 1fr; /* This creates two columns of equal width */
-  grid-template-rows: auto auto; /* This creates two rows that adjust to their content */
+  grid-template-columns: 1fr 1fr 1fr; /* This creates two columns of equal width */
+  grid-template-rows: auto; /* This creates two rows that adjust to their content */
   grid-gap: 20px;
   width: 100%; /* This makes the skillsContainerGrid take up the full width of its parent grid cell */
 }
@@ -40,225 +42,6 @@
 .featuresContainerGrid {
   grid-column: 1 / 4;
   grid-row: 4 / 5;
-}
-
-/* Basics Container CSS */
-
-.row {
-  display: flex;
-  justify-content: space-between;
-}
-
-.attribute {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.attributeBox {
-  width: 200px;
-  height: 100px;
-  border: 1px solid white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(255, 255, 255, 0.5);
-  color: black;
-}
-.levelClassContainer {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.level,
-.class {
-  width: 45%;
-  text-align: center;
-}
-
-hr {
-  width: 100%;
-  border: none;
-  border-top: 1px solid white;
-}
-
-.numberWord {
-  text-align: center;
-}
-.basicsContainer {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-hr {
-  border: none;
-  border-top: 1px solid white; /* Change 'white' to any color you want */
-  width: 100%;
-}
-
-/* Name Container CSS */
-.nameContainer {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.attribute {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.nameBox {
-  width: 200px;
-  height: 50px;
-  border: 1px solid black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(255, 255, 255, 0.5);
-  color: black;
-}
-
-.numberBox {
-  width: 50px;
-  height: 50px;
-  border: 1px solid black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(255, 255, 255, 0.5);
-  color: black;
-}
-
-.circle {
-  width: 30px;
-  height: 30px;
-  border: 1px solid black;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  top: -15px;
-  background-color: rgba(255, 255, 255, 0.5);
-  color: black;
-}
-
-/* Skills Container */
-.skillItem {
-  display: flex;
-  align-items: center; /* Align the items along the center line */
-  width: fit-content; /* Adjust the width to fit the content */
-}
-
-.circle {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  border: 1px solid black;
-  margin-right: 5px;
-}
-
-.circle.filled {
-  background-color: black; /* Fill the circle */
-}
-
-.breakLineContainer {
-  position: relative;
-  width: 50px; /* Set the width to be the same as the break line */
-  margin-left: auto; /* Center the div */
-  margin-right: auto; /* Center the div */
-  text-align: center; /* Center the text and break line */
-}
-
-.proficiencyNumber {
-  position: absolute;
-  bottom: 100%; /* Position the number above the break line */
-  left: 50%; /* Center the number */
-  transform: translateX(-50%); /* Ensure the centering is accurate */
-  width: 50px; /* Set the width to be the same as the break line */
-}
-
-.breakLine {
-  display: inline-block;
-  width: 50px;
-  border-top: 1px solid white;
-}
-
-.wealthcontainer {
-  background: rgba(255, 255, 255, 0.5); /* White background with 80% opacity */
-  padding: 20px; /* Add some padding */
-  width: fit-content; /* Adjust the width to fit the content */
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow for a 3D effect */
-  color: black;
-}
-
-.skillsList {
-  grid-column: 1; /* This places the skills list in the first column */
-  grid-row: 1; /* This places the skills list in the first row */
-}
-
-.savingThrowsList {
-  grid-column: 3; /* This places the saving throws list in the second column */
-  grid-row: 1; /* This places the saving throws list in the first row */
-}
-
-.wealth {
-  grid-column: 3; /* This places the wealth in the second column */
-  grid-row: 3; /* This places the wealth in the second row */
-}
-/* Features & traits css */
-.trait {
-  background: rgba(255, 255, 255, 0.5); /* White background with 80% opacity */
-  padding: 20px; /* Add some padding */
-  width: fit-content; /* Adjust the width to fit the content */
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow for a 3D effect */
-  margin-bottom: 20px; /* Add some space between the features */
-  color: black;
-}
-
-/* Equipment Container */
-.equipmentContainer {
-  display: grid; /* This makes .equipmentContainer a grid container */
-  grid-template-columns: 1fr 1fr 1fr; /* This creates three columns of equal width */
-  grid-gap: 20px; /* This adds some space between the grid items */
-}
-/* Features Container css */
-
-.personalityContainer,
-.idealsContainer,
-.bondsContainer,
-.flawsContainer,
-.boxconfig {
-  background: rgba(255, 255, 255, 0.5); /* White background with 80% opacity */
-  padding: 20px; /* Add some padding */
-  width: fit-content; /* Adjust the width to fit the content */
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow for a 3D effect */
-  margin-bottom: 20px; /* Add some space between the features */
-  color: #29251e;
-}
-.skillsContainerGrid.boxconfig {
-  width: 100%; /* This makes the skillsContainerGrid take up the full width of its parent grid cell */
-}
-
-.weaponsContainer table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-.weaponsContainer th,
-.weaponsContainer td {
-  padding: 10px;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
-}
-
-.weaponsContainer th {
-  border-top: 1px solid #ddd; /* Add a border to the top of the header cells */
-  border-bottom: 2px solid #ddd; /* Make the border at the bottom of the header cells thicker */
 }
 
 /* Features blue */

@@ -1,0 +1,83 @@
+/* CSS Variables */
+:root {
+  --centered-content: flex;
+  --grid-position: 1;
+}
+
+/* Skills Container */
+.skillsContainerGrid.boxconfig {
+  display: grid;
+  grid-template-columns: repeat(
+    3,
+    1fr
+  ); /* This creates three columns of equal width */
+  grid-template-rows: auto; /* This creates one row that adjusts to its content */
+  grid-gap: 20px;
+  width: 100%; /* This makes the skillsContainerGrid take up the full width of its parent grid cell */
+}
+
+.skillItem,
+.circle,
+.wealthcontainer {
+  display: var(--centered-content);
+  align-items: center;
+  width: fit-content;
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid black;
+  margin-right: 5px;
+}
+
+.circle.filled {
+  background-color: black; /* Fill the circle */
+}
+
+.breakLineContainer {
+  position: relative;
+  width: 50px; /* Set the width to be the same as the break line */
+  margin: 0 auto; /* Center the div */
+  text-align: center; /* Center the text and break line */
+}
+
+.proficiencyNumber {
+  position: absolute;
+  bottom: 100%; /* Position the number above the break line */
+  left: 50%; /* Center the number */
+  transform: translateX(-50%); /* Ensure the centering is accurate */
+  width: 50px; /* Set the width to be the same as the break line */
+}
+
+.breakLine {
+  display: inline-block;
+  width: 50px;
+  border-top: 1px solid white;
+}
+
+.wealthcontainer {
+  background: rgba(255, 255, 255, 0.5); /* White background with 80% opacity */
+  padding: 20px; /* Add some padding */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow for a 3D effect */
+  color: black;
+}
+
+.skillsList,
+.savingThrowsList,
+.wealth {
+  grid-row: var(--grid-position);
+}
+
+.skillsList {
+  grid-column: 1; /* This places the skills list in the first column */
+}
+
+.savingThrowsList {
+  grid-column: 2; /* This places the saving throws list in the second column */
+}
+
+.wealth {
+  grid-column: 3; /* This places the wealth in the third column */
+}
