@@ -2,6 +2,41 @@
 .MainCharacterContainer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto auto; /* Add an extra row */
+  grid-template-areas:
+    "name basics basics"
+    "name skills traits"
+    "equipment equipment equipment"
+    "features features features";
+  grid-gap: 20px;
+}
+
+.nameContainerGrid {
+  grid-area: name;
+}
+
+.basicsContainerGrid {
+  grid-area: basics;
+}
+
+.skillsContainerGrid {
+  grid-area: skills;
+}
+
+.traitsContainerGrid {
+  grid-area: traits;
+}
+
+.equipmentContainerGrid {
+  grid-area: equipment;
+}
+
+.featuresContainerGrid {
+  grid-area: features;
+}
+/*.MainCharacterContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto auto auto;
   grid-gap: 20px 0;
 }
@@ -18,7 +53,7 @@
 }
 
 .skillsContainerGrid {
-  /*grid-column: 1 / 4;*/
+  /*grid-column: 1 / 4;
   grid-column: 2 / 2;
   grid-row: 2 / 4;
 }
