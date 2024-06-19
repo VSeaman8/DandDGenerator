@@ -10,7 +10,7 @@ import "../containers/BasicsContainer.css";
 import "../containers/EquipmentContainer.css";
 import "../containers/FeaturesContainer.css";
 import "../containers/NameContainer.css";
-import "../containers/SkillsContainer.css";
+/*import "../containers/SkillsContainer.css";*/
 import "../containers/TraitsContainer.css";
 
 const FavouriteCharPage = () => {
@@ -19,12 +19,13 @@ const FavouriteCharPage = () => {
       <div className="nameContainerGrid">
         <NameContainer />
       </div>
-      <div className="skillsContainerGrid">
-        <SkillsContainer />
-      </div>
       <div className="basicsContainerGrid">
         <BasicsContainer />
       </div>
+      <div className="skillsContainerGrid">
+        <SkillsContainer />
+      </div>
+
       <div className="equipmentContainerGrid">
         <EquipmentContainer />
       </div>

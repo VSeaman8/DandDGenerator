@@ -47,9 +47,3 @@ hr {
   flex-direction: column;
   gap: 10px;
 }
-
-hr {
-  border: none;
-  border-top: 1px solid white; /* Change 'white' to any color you want */
-  width: 100%;
-}

@@ -5,20 +5,9 @@
 }
 
 /* Skills Container */
-.skillsContainerGrid.boxconfig {
-  display: grid;
-  grid-template-columns: repeat(
-    3,
-    1fr
-  ); /* This creates three columns of equal width */
-  grid-template-rows: auto; /* This creates one row that adjusts to its content */
-  grid-gap: 20px;
-  width: 100%; /* This makes the skillsContainerGrid take up the full width of its parent grid cell */
-}
 
 .skillItem,
-.circle,
-.wealthcontainer {
+.circle {
   display: var(--centered-content);
   align-items: center;
   width: fit-content;
@@ -57,27 +46,9 @@
   border-top: 1px solid white;
 }
 
-.wealthcontainer {
+.wealthContainer {
   background: rgba(255, 255, 255, 0.5); /* White background with 80% opacity */
   padding: 20px; /* Add some padding */
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow for a 3D effect */
   color: black;
-}
-
-.skillsList,
-.savingThrowsList,
-.wealth {
-  grid-row: var(--grid-position);
-}
-
-.skillsList {
-  grid-column: 1; /* This places the skills list in the first column */
-}
-
-.savingThrowsList {
-  grid-column: 2; /* This places the saving throws list in the second column */
-}
-
-.wealth {
-  grid-column: 3; /* This places the wealth in the third column */
 }
