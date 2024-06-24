@@ -1,160 +1,150 @@
 /* FavouriteCharPage CSS & common to all containers CSS */
+:root {
+  --grid-gap: 20px;
+  --background-color: rgba(
+    255,
+    255,
+    255,
+    0.5
+  ); /* White background with 80% opacity */
+  --box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Shadow for a 3D effect */
+  --text-color: #29251e;
+  --centered-content: flex;
+  --border-style: 1px solid var(--text-color);
+}
+
 .MainCharacterContainer {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto auto auto auto; /* Add an extra row */
+  grid-template-columns: 0.6fr 1.35fr 1fr;
+  grid-template-rows: repeat(4, auto); /* Four rows of auto height */
   grid-template-areas:
     "name basics basics"
     "name skills traits"
     "equipment equipment equipment"
     "features features features";
-  grid-gap: 20px;
+  gap: var(--grid-gap);
+  background: rgba(
+    255,
+    255,
+    255,
+    0.15
+  ); /* Adjusted transparency specifically for this container */
+  box-shadow: var(--box-shadow);
+  color: var(--text-color);
+  margin: 50px;
 }
 
 .nameContainerGrid {
   grid-area: name;
 }
-
 .basicsContainerGrid {
   grid-area: basics;
 }
-
 .skillsContainerGrid {
   grid-area: skills;
 }
-
 .traitsContainerGrid {
   grid-area: traits;
 }
-
 .equipmentContainerGrid {
   grid-area: equipment;
 }
-
 .featuresContainerGrid {
   grid-area: features;
 }
-/*.MainCharacterContainer {
+
+/* Features & skillsContainer */
+.featuresContainer,
+.skillsContainer {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto auto auto;
-  grid-gap: 20px 0;
+  gap: var(--grid-gap);
+}
+.featuresContainer {
+  grid-template-columns: repeat(4, 1fr); /* Four columns of equal width */
+}
+.skillsContainer {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
 }
 
-.nameContainerGrid {
+.skillsList,
+.savingThrowsList,
+.wealthContainer,
+.traitsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--background-color);
+  box-shadow: var(--box-shadow);
+  color: var(--text-color);
+}
+
+.skillsList {
   grid-column: 1 / 2;
   grid-row: 1 / 3;
 }
 
-.basicsContainerGrid {
-  grid-column: 2 / 4;
-  grid-row: 1 / 2;
-  height: 50%;
-}
-
-.skillsContainerGrid {
-  /*grid-column: 1 / 4;
-  grid-column: 2 / 2;
-  grid-row: 2 / 4;
-}
-
-.traitsContainerGrid {
-  grid-column: 3 / 4;
-  grid-row: 2 / 4;
-}
-
-.equipmentContainerGrid {
-  grid-column: 1 / 4;
-  grid-row: 3 / 4;
-}
-
-.featuresContainerGrid {
-  grid-column: 1 / 4;
-  grid-row: 4 / 5;
-}
-
-/* Features blue */
-.featuresContainer {
-  display: grid; /* This makes .equipmentContainer a grid container */
-  grid-template-columns: repeat(
-    4,
-    1fr
-  ); /* This creates four columns of equal width */
-  grid-gap: 20px; /* This adds some space between the grid items */
-}
-
-/* skillsContainer css */
-.skillsContainer {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto;
-  gap: 20px;
-}
-
-.skillsList {
-  grid-column: 1 / 2; /* This places the .skillsList in the first column */
-  grid-row: 1 / 3; /* This places the .skillsList in both rows */
+.savingThrowsList,
+.wealthContainer {
+  grid-column: 2 / 3;
 }
 
 .savingThrowsList {
-  grid-column: 2 / 3; /* This places the .savingThrowsList in the second column */
-  grid-row: 1 / 2; /* This places the .savingThrowsList in the first row */
+  grid-row: 1 / 2;
 }
-
 .wealthContainer {
-  grid-column: 2 / 3; /* This places the .wealthContainer in the second column */
-  grid-row: 2 / 3; /* This places the .wealthContainer in the second row */
+  grid-row: 2 / 3;
 }
 
-/* CSS Variables */
-:root {
-  --centered-content: flex;
-  --grid-position: 1;
-}
-
-/* Skills Container */
-
+/* Skills Item */
 .skillItem,
-.circle {
+.skillCircle {
   display: var(--centered-content);
   align-items: center;
   width: fit-content;
 }
 
-.circle {
-  width: 20px;
-  height: 20px;
+.skillCircle {
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
-  border: 1px solid black;
+  border: var(--border-style);
   margin-right: 5px;
 }
 
-.circle.filled {
-  background-color: black; /* Fill the circle */
+.skillCircle.filled {
+  background-color: var(--text-color);
 }
 
 .breakLineContainer {
   position: relative;
-  width: 25px; /* Set the width to be the same as the break line */
-  margin: 0 auto; /* Center the div */
-  text-align: center; /* Center the text and break line */
-}
-.proficiencyNumber {
-  position: absolute;
-  bottom: 100%; /* Position the number above the break line */
-  left: 50%; /* Center the number */
-  transform: translateX(-50%); /* Ensure the centering is accurate */
-  width: 25px; /* Set the width to be the same as the break line */
-}
-.breakLine {
-  display: inline-block;
-  width: 50px;
-  border-top: 1px solid white;
+  width: 25px;
+  height: 20px;
+  margin: 0 auto;
+  text-align: center;
 }
 
-.wealthContainer {
-  background: rgba(255, 255, 255, 0.5); /* White background with 80% opacity */
-  padding: 20px; /* Add some padding */
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow for a 3D effect */
-  color: black;
+.proficiencyNumber {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 25px;
+}
+
+.breakLine,
+.shortBreak {
+  display: inline-block;
+  width: 20px; /* shortBreak width should be adjusted if needed */
+  border-top: var(--border-style);
+  text-align: center;
+  margin: auto;
+}
+
+.shortBreak {
+  width: 75%;
+}
+
+h3 {
+  text-align: center;
 }

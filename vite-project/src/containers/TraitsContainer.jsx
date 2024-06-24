@@ -1,8 +1,9 @@
 const TraitsContainer = () => {
   return (
     <div className="TraitsContainer">
-      <h3>Features & Traits</h3>
       <div className="trait">
+        <h3>Features & Traits</h3>
+        <hr className="shortBreak" />
         <h3>Racial</h3>
         <p>
           Draconic Ancestry: Your breath weapon and damage resistance are
@@ -14,8 +15,7 @@ const TraitsContainer = () => {
           Damage is 2d6, half as much on successful save. Damage increases to
           3d6 at 6th, 4d6 at 11th, and 5d6 at 16th.
         </p>
-      </div>
-      <div className="trait">
+
         <h3>Class</h3>
         <p>
           Expertise: 2x proficiency for two skills, or one skill and thieves'

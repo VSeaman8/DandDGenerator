@@ -32,11 +32,12 @@ const SkillsContainer = () => {
     <div className="skillsContainer">
       <div className="skillsList">
         <h3>Skills</h3>
+        <hr className="shortBreak" />
         <ul>
           {skills.map((skill) => (
             <li key={skill.name} className="skillItem">
               <span
-                className={`circle ${skill.proficiency ? "filled" : ""}`}
+                className={`skillCircle ${skill.proficiency ? "filled" : ""}`}
               ></span>
               <div className="breakLineContainer">
                 {skill.proficiency && (
@@ -51,11 +52,14 @@ const SkillsContainer = () => {
       </div>
       <div className="savingThrowsList ">
         <h3>Saving Throws</h3>
+        <hr className="shortBreak" />
         <ul>
           {savingThrows.map((throwItem) => (
             <li key={throwItem.name} className="skillItem">
               <span
-                className={`circle ${throwItem.proficiency ? "filled" : ""}`}
+                className={`skillCircle ${
+                  throwItem.proficiency ? "filled" : ""
+                }`}
               ></span>
               <div className="breakLineContainer">
                 {throwItem.proficiency && (
@@ -71,7 +75,8 @@ const SkillsContainer = () => {
         </ul>
       </div>
       <div className="wealthContainer">
-        <h2>Wealth</h2>
+        <h3>Wealth</h3>
+        <hr className="shortBreak" />
         <p>Gold 296</p>
         <p>Silver 500</p>
         <p>Copper 6,000</p>
