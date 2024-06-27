@@ -2,9 +2,8 @@ import { useNavigate } from "react-router-dom";
 
 const GeneratorBtn = () => {
   const navigate = useNavigate();
-  // when clicked the button will call on the API
-  // call and navigate to character page
-  const handleButtonClick = (event) => {
+
+  const handleButtonClick = async (event) => {
     event.preventDefault();
     navigate("/favouriteCharPage");
   };
