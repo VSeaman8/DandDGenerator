@@ -29,8 +29,6 @@ const EquipmentContainer = () => {
               <td>5</td>
             </tr>
             <tr>
-              {" "}
-              {/* This opening <tr> tag was missing for the Shortbow row */}
               <td>Shortbow</td>
               <td>+4</td>
               <td>1d6 +2 piercing</td>
