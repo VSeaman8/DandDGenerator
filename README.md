@@ -1,4 +1,4 @@
-# DandDGenerator
+# D&D Character Generator
 A fun frontend project designed to quickly generate Dungeons and Dragons characters for inspiration. This project aims to be visually pleasing while allowing me to practice calling and randomizing data from an API.
 
 ### Project Purpose and Goal
