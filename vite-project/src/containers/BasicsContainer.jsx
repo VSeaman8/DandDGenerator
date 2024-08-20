@@ -1,24 +1,28 @@
 import "../pages/FavouriteCharPage.css";
 
-const BasicsContainer = () => {
+const BasicsContainer = ({ classes, alignments }) => {
   return (
     <div className="basicsContainer">
       <div className="row">
         <div className="attributeBox">
           <div className="levelClassContainer">
             <div className="level">1</div>
-            <div className="class">ROGUE</div>
+            <div className="class">
+              {classes.length > 0 ? classes[0].name : "N/A"}
+            </div>
           </div>
           <hr />
           <h3>Level & Class</h3>
         </div>
-        <div className="attributeBox">
+        <div className="attributeBox background">
           <div className="numberWord">Outlander</div>
           <hr />
           <h3>Background</h3>
         </div>
-        <div className="attributeBox">
-          <div className="numberWord">Neutral</div>
+        <div className="attributeBox alignment">
+          <div className="numberWord">
+            {alignments > 0 ? alignments[0].name : "N/A"}
+          </div>
           <hr />
           <h3>Alignment</h3>
         </div>

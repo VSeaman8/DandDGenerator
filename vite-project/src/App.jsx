@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 
+import DataFetcher from "./utility-functions/DataFetcher.jsx";
 import FavouriteCharPage from "./pages/FavouriteCharPage.jsx";
 import HomePage from "./pages/HomePage.jsx";
 import Layout from "./layout/Layout.jsx";
@@ -14,7 +15,7 @@ function App() {
       <Layout page={location.pathname}>
         <Routes>
           <Route exact path="/" element={<HomePage />} />
-          <Route path="/FavouriteCharPage" element={<FavouriteCharPage />} />
+          <Route path="/FavouriteCharPage" element={<DataFetcher />} />
         </Routes>
       </Layout>
     </div>
