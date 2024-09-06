@@ -1,16 +1,31 @@
 import express from "express";
-import { ApolloServer } from "apollo-server-express";
-import typeDefs from "./schema";
-import resolvers from "./resolvers";
+import { graphqlHTTP } from "express-graphql";
+import colors from "colors";
 
-const app = express();
+import resolvers from "./resolvers.js";
+import schema from "./schema.js";
+import fetchData from "./fetchData.js";
+
+// set port to PORT
+
 const port = 3000;
 
-// Create an Apollo server
-const server = new ApolloServer({ typeDefs, resolvers });
-await server.start();
-server.applyMiddleware({ app });
+// instance of Express application
+const app = express();
 
-app.listen({ port }, () =>
-  console.log(`Server ready at http://localhost:${port}${server.graphqlPath}`)
+// GraphQL endpoint with schema and GraphiQL interface
+app.use(
+  "/graphql",
+  graphqlHTTP({
+    schema,
+    rootValue: resolvers,
+    graphiql: true,
+  })
 );
+
+fetchData();
+
+// Start the server
+app.listen(port, () => {
+  console.log(`Server running on http://localhost:${port}/graphql`.cyan);
+});

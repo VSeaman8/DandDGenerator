@@ -1,28 +1,13 @@
-import { gql } from "apollo-server-express";
+import { buildSchema } from "graphql";
 
-// Define the GraphQL schema
-
-const typeDefs = gql`
-  type Feature {
-    index: String
+const schema = buildSchema(`
+  type Class {
     name: String
   }
 
-  type Character {
-    personality: String
-    ideals: String
-    bonds: String
-    flaws: String
-  }
-
   type Query {
-    alignments: [Feature]
-    randomCharacter: Character
+    classes: [Class]
   }
+`);
 
-  type Mutation {
-    updateFeature(index: String!, name: String!): Feature
-  }
-`;
-
-export default typeDefs;
+export default schema;
