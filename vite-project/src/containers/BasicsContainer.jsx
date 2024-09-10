@@ -21,7 +21,7 @@ const BasicsContainer = ({ classes, alignments }) => {
         </div>
         <div className="attributeBox alignment">
           <div className="numberWord">
-            {alignments > 0 ? alignments[0].name : "N/A"}
+            <p>good</p>
           </div>
           <hr />
           <h3>Alignment</h3>

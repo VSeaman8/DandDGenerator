@@ -13,14 +13,14 @@ import "../containers/NameContainer.css";
 /*import "../containers/SkillsContainer.css";*/
 import "../containers/TraitsContainer.css";
 
-const FavouriteCharPage = ({ classes, alignments }) => {
+const FavouriteCharPage = ({ classes }) => {
   return (
     <div className="MainCharacterContainer">
       <div className="nameContainerGrid">
         <NameContainer />
       </div>
       <div className="basicsContainerGrid">
-        <BasicsContainer classes={classes} alignments={alignments} />
+        <BasicsContainer classes={classes} />
       </div>
       <div className="skillsContainerGrid">
         <SkillsContainer />
