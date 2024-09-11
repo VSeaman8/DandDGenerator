@@ -1,6 +1,7 @@
 import "../pages/FavouriteCharPage.css";
 
-const BasicsContainer = ({ classes, alignments }) => {
+const BasicsContainer = ({ classes }) => {
+  console.log(`Classes prop in basics container: ${classes}`);
   return (
     <div className="basicsContainer">
       <div className="row">

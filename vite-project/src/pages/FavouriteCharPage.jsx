@@ -14,6 +14,7 @@ import "../containers/NameContainer.css";
 import "../containers/TraitsContainer.css";
 
 const FavouriteCharPage = ({ classes }) => {
+  console.log(`Classes prop in Char page: ${classes}`);
   return (
     <div className="MainCharacterContainer">
       <div className="nameContainerGrid">
